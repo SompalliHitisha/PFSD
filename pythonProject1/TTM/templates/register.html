@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block 'b1' %}
+<h2 align="center"><font color="purple" size="6x"> SIGN-UP</font></h2>
+<form method="post" action="{% url 'checkRegistration' %}">
+    {% csrf_token %}
+    <table align="center" border="1" >
+        <tr>
+            <td><font color="black">ENTER NAME :</font></td>
+            <td> <input type="text" name="name" required/> </td>
+        </tr>
+        <tr>
+            <td><font color="black">ENTER ADDRESS :</font></td>
+            <td> <input type="text" name="addr" required/> </td>
+        </tr>
+         <tr>
+             <td><font color="black">ENTER EMAIL ID :</font></td>
+            <td> <input type="text" name="email" required/> </td>
+        </tr>
+         <tr>
+             <td><font color="black">ENTER PHONE NUMBER :</font></td>
+            <td> <input type="text" name="phno" required/> </td>
+        </tr>
+        <td><font color="black"><label>ENTER USERNAME :</label></font></td>
+            <td><input type="text" name="uname" required/> </td>
+        </tr>
+        <tr>
+            <td><font color="black"><label>ENTER PASSWORD :</label></font></td>
+            <td><input type="password" name="pwd" required/></td>
+        </tr>
+        <tr>
+            <td><font color="black"><label>CONFIRM PASSWORD :</label></font></td>
+            <td><input type="password" name="cpwd" required/></td>
+        </tr>
+        <tr>
+            <td align="center"> <input type="submit" value="sign-up"> </td>
+            <td align="center"> <input type="reset" value="Clear"></td>
+        </tr>
+    </table>
+</form>
+<div>
+    {% for i in messages %}
+    <h4><font color="purple"> {{i}} </font></h4>
+    {% endfor %}
+</div>
+{% endblock %}

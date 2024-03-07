@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAVEL TOURISM MANAGEMENT</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-image: url('{% static 'images/home7.jpg' %}');background-repeat:no-repeat;background-size:130%;";>
+
+    <a href="{% url 'register'%}">SIGN-UP  | </a> &nbsp
+    <a href="{%url 'LOGIN'%}">LOGIN   |</a> &nbsp
+    <a href="{%url 'changepassword'%}">Change Password   |</a> &nbsp
+{% block 'b1' %}
+<h2 align="center"><font color="purple" size="10x"> TRAVEL TOURISM & MANAGEMENT</font></h2>
+    <div>
+        {% for i in messages %}
+        <h4 align="center"><font color="brown" size="5x"> {{i}} </font></h4>
+        {% endfor %}
+    </div>
+ {% endblock %}
+
+<center>
+    <a href="{% url 'DASHBOARD'%}">DASHBOARD   |</a> &nbsp
+    <a href="{%url 'CONTACTUS'%}">CONTACTUS   |</a> &nbsp
+    <a href="{%url 'ABOUTUS'%}">ABOUTUS   |</a>
+</center>
+</body>
+</html>

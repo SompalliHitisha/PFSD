@@ -1,0 +1,14 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABOUT</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+{% block 'b1' %}
+<h2 align="center"><font color="purple" size="6x">ABOUT US</font></h2>
+<a href="{% url 'DASHBOARD'%}">DASHBOARD   |</a> &nbsp
+ {% endblock %}
+</body>
+</html>
